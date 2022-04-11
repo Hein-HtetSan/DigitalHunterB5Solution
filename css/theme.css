@@ -1,0 +1,70 @@
+html{
+    --bss-light2: var(--bs-white);
+}
+
+
+html[theme = 'dark']{
+    --bs-primary: #ff0000;
+    --bss-dark: var(--bs-dark);
+    --bss-gray-400: var(--bs-gray-400);
+    --bss-gray-800: var(--bs-gray-800);
+    --bss-light: var(--bs-white);
+    --bss-secondary: var(--bs-secondary);
+    --navbar-bg-color: ##6c757d;
+}
+.container-fluid{
+    background-color: var(--bss-dark);
+}
+*{
+    color:var(--bss-gray-400);
+}
+
+.icon{
+    color: var(--bss-dark);
+    padding: 8px;
+    background: var(--bss-light);
+    border: 1px solid var(--bss-gray-800);
+}
+.text-card{
+    color: var(--bss-light);
+}
+.l-header{
+    color: var(--bss-light);
+}
+
+.text1{
+    color: var(--bss-light);
+    color: var(--bss-light2);
+}
+.nav-links::before{
+    content: '';
+    position: absolute;
+    top:50px;
+    right: 0;
+    width: 0px;
+    height: 2px;
+    background: var(--bss-light);
+    border-radius: 5px;
+    transition: 1s ease;
+}
+.nav-links:hover::before{
+    width: 100%;
+}
+.nav-links:hover{
+    color: var(--bss-light);
+}
+.nav-links.activeClass{
+    color: var(--bss-light);
+}
+.nav-links.activeClass::before{
+    width: 100%;
+}
+.hard-work2-head{
+    color: var(--bss-light);
+}
+.sub-head{
+    color: var(--bss-light);
+}
+.icons:hover{
+    color: var(--bss-light);
+}

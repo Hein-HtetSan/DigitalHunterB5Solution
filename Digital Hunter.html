@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Hunter</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Bootstrap local link-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <!--fontawesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap cdn link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body >
+    <!--Navbar or Navigation start-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark bordercolor1">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <svg width="35" height="35" viewBox="0 0 515 549" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M514.109 115.034L510.085 23.3172C510.039 22.2564 509.724 21.2247 509.168 20.32C508.612 19.4152 507.835 18.6671 506.909 18.1467C505.984 17.6262 504.941 17.3504 503.879 17.3455C502.817 17.3406 501.771 17.6068 500.841 18.1187L371.611 89.1876C368.725 85.9362 364.95 83.6019 360.751 82.4734C356.552 81.3449 352.115 81.4716 347.988 82.838C343.861 84.2044 340.224 86.7505 337.529 90.1614C334.833 93.5723 333.196 97.6985 332.82 102.03L291.974 108.058H238.373L176.408 98.9166L47.5018 28.0385C47.9128 26.3387 48.1198 24.5961 48.1186 22.8473C48.1156 18.7276 46.9696 14.6894 44.808 11.1823C42.6464 7.67516 39.554 4.83662 35.875 2.98255C32.1961 1.12848 28.0748 0.331615 23.9698 0.68063C19.8649 1.02964 15.9373 2.51085 12.6241 4.95941C9.31095 7.40797 6.7422 10.7278 5.20371 14.5496C3.66523 18.3713 3.21738 22.5449 3.90998 26.6061C4.60258 30.6672 6.40847 34.4565 9.12669 37.5522C11.8449 40.648 15.3688 42.9288 19.3063 44.1408L17.1035 94.232C11.914 95.6763 7.42448 98.9538 4.46772 103.457C1.51096 107.959 0.28765 113.382 1.02471 118.718C1.76177 124.054 4.40917 128.941 8.47583 132.474C12.5425 136.007 17.7524 137.944 23.1391 137.928C24.0747 137.93 25.0093 137.868 25.9366 137.744L72.5621 238.411L46.2976 356.069C46.0174 357.298 46.1189 358.584 46.5886 359.754C47.0583 360.925 47.8738 361.924 48.9263 362.618L160.101 436.698L214.796 544.986C215.315 546.018 216.112 546.884 217.096 547.489C218.08 548.093 219.214 548.411 220.369 548.408H309.948C311.104 548.412 312.238 548.093 313.223 547.487C314.207 546.881 315.003 546.013 315.521 544.979L370.209 436.698L481.383 362.611C482.428 361.907 483.237 360.906 483.706 359.737C484.174 358.568 484.281 357.285 484.012 356.054L462.057 257.663C465.383 255.992 468.236 253.512 470.355 250.452C472.475 247.392 473.792 243.849 474.188 240.148C474.583 236.447 474.043 232.705 472.618 229.267C471.193 225.828 468.927 222.802 466.03 220.466L513.536 117.927C513.956 117.022 514.153 116.03 514.109 115.034ZM354.988 92.7268C357.213 92.7268 359.387 93.3865 361.237 94.6225C363.087 95.8586 364.529 97.6154 365.38 99.6708C366.232 101.726 366.454 103.988 366.02 106.17C365.586 108.352 364.515 110.357 362.942 111.93C361.369 113.503 359.364 114.574 357.182 115.008C355 115.442 352.738 115.22 350.683 114.368C348.628 113.517 346.871 112.075 345.635 110.225C344.399 108.375 343.739 106.2 343.739 103.976C343.741 100.993 344.927 98.1328 347.036 96.0236C349.145 93.9145 352.005 92.7287 354.988 92.7268ZM23.1391 126.914C20.9137 126.915 18.7378 126.257 16.8868 125.021C15.0358 123.786 13.5929 122.029 12.7406 119.973C11.8883 117.917 11.6649 115.655 12.0987 113.472C12.5325 111.29 13.604 109.285 15.1776 107.711C16.7512 106.137 18.7563 105.066 20.939 104.632C23.1218 104.198 25.3841 104.422 27.4399 105.274C29.4957 106.126 31.2524 107.569 32.4879 109.42C33.7234 111.271 34.3821 113.447 34.3806 115.672C34.3767 118.653 33.1911 121.51 31.0838 123.617C28.9764 125.724 26.1193 126.91 23.1391 126.914ZM36.1942 133.684C39.6554 131.178 42.3214 127.728 43.8733 123.747C45.4253 119.766 45.7975 115.422 44.9455 111.234C44.0935 107.047 42.0533 103.194 39.069 100.136C36.0847 97.0775 32.2825 94.9438 28.1174 93.9897L30.2981 44.6768C31.5828 44.4173 32.8411 44.0413 34.0575 43.5534L117.602 162.665L80.3967 229.079L36.1942 133.684ZM363.057 428.268C362.159 428.864 361.432 429.684 360.95 430.647L307.011 537.365H223.306L169.389 430.625C168.902 429.657 168.17 428.832 167.267 428.232L76.0351 367.435L154.373 388.347L225.787 449.68L225.149 481.04C225.129 482.021 225.341 482.993 225.767 483.877C226.193 484.761 226.821 485.532 227.601 486.128L261.377 511.945C262.466 512.774 263.797 513.222 265.166 513.222C266.534 513.222 267.865 512.774 268.954 511.945L302.73 486.135C303.51 485.539 304.138 484.768 304.564 483.884C304.991 483 305.202 482.028 305.183 481.047L304.544 449.68L375.966 388.347L454.282 367.442L363.057 428.268ZM209.648 348.814L163.463 344.6L148.396 314.833L187.217 316.947L210.383 340.789L209.648 348.814ZM236.207 478.852L236.699 455.076H293.626L294.118 478.852L265.158 500.975L236.207 478.852ZM319.912 340.811L343.078 316.97L381.898 314.855L366.839 344.622L320.646 348.814L319.912 340.811ZM472.484 354.975L373.249 381.474L371.78 382.208L327.255 420.507L321.689 359.784L369.695 355.379C370.996 355.263 372.246 354.817 373.327 354.084C374.407 353.35 375.283 352.353 375.87 351.186L395.783 311.844C396.248 310.925 396.464 309.899 396.407 308.87C396.35 307.841 396.024 306.845 395.461 305.982C394.898 305.119 394.117 304.42 393.198 303.953C392.279 303.487 391.254 303.271 390.225 303.327L341.206 306.014C339.259 306.111 337.422 306.943 336.066 308.342L310.939 334.203C310.162 335 309.567 335.956 309.195 337.006C308.824 338.056 308.685 339.174 308.788 340.282L316.975 429.311L299.793 444.062H230.509L213.327 429.311L221.521 340.29C221.625 339.18 221.487 338.062 221.117 337.011C220.747 335.96 220.153 335.002 219.377 334.203L194.251 308.342C192.893 306.945 191.057 306.114 189.111 306.014L140.107 303.349C139.078 303.293 138.052 303.509 137.133 303.976C136.214 304.442 135.434 305.141 134.87 306.004C134.307 306.867 133.981 307.863 133.924 308.892C133.868 309.921 134.083 310.947 134.548 311.866L154.461 351.208C155.049 352.375 155.924 353.372 157.005 354.106C158.085 354.839 159.335 355.285 160.637 355.401L208.642 359.806L203.077 420.529L158.507 382.26L157.039 381.526L57.8255 354.975L83.7155 238.962L84.0092 237.647L124.9 164.655C125.306 163.931 125.499 163.107 125.458 162.279C125.416 161.45 125.142 160.65 124.665 159.97L40.3501 39.7206C41.0635 39.1177 41.7356 38.4676 42.362 37.7748L171.951 109.042L172.818 109.519L237.55 119.065H292.745L334.597 112.897C336.649 117.576 340.247 121.408 344.79 123.747C349.332 126.087 354.541 126.792 359.542 125.745C364.543 124.698 369.031 121.962 372.253 117.996C375.475 114.031 377.234 109.078 377.236 103.968C377.237 102.287 377.045 100.612 376.663 98.9753L493.197 34.8892L418.435 141.68C415.376 140.68 412.137 140.355 408.941 140.728C405.745 141.101 402.667 142.163 399.921 143.84C397.174 145.518 394.825 147.771 393.033 150.444C391.241 153.117 390.051 156.147 389.544 159.325C389.036 162.502 389.224 165.752 390.094 168.851C390.964 171.949 392.495 174.821 394.583 177.27C396.67 179.72 399.264 181.687 402.185 183.037C405.106 184.386 408.286 185.087 411.504 185.089C413.197 185.092 414.885 184.897 416.533 184.509L437.144 221.303C433.858 224.273 431.535 228.157 430.471 232.457C429.407 236.757 429.651 241.276 431.172 245.436C432.692 249.596 435.421 253.207 439.007 255.807C442.593 258.407 446.874 259.876 451.301 260.028L472.484 354.975ZM452.079 249.036C449.854 249.036 447.679 248.376 445.829 247.14C443.979 245.904 442.538 244.147 441.686 242.092C440.835 240.036 440.612 237.775 441.046 235.592C441.48 233.41 442.551 231.406 444.125 229.833C445.698 228.26 447.702 227.188 449.884 226.754C452.066 226.32 454.328 226.543 456.384 227.394C458.439 228.246 460.196 229.688 461.432 231.537C462.668 233.387 463.328 235.562 463.328 237.787C463.326 240.77 462.14 243.63 460.031 245.739C457.922 247.848 455.062 249.034 452.079 249.036ZM456.014 215.891C454.717 215.649 453.399 215.528 452.079 215.532C449.069 215.527 446.09 216.139 443.326 217.331L423.34 181.66C426.385 179.749 428.921 177.128 430.731 174.021C432.541 170.915 433.57 167.416 433.731 163.825C433.892 160.233 433.18 156.656 431.655 153.4C430.131 150.144 427.839 147.307 424.977 145.131L499.725 38.3696L503.051 114.351L456.014 215.891Z" fill="#DBEAFE"/>
+                        </svg>
+                    Digital Hunter
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#developer">Developer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#pricing" class="nav-link">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blog" class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gx-5">
+                        <div class="col text1 me-2">
+                            <i class="fa-regular fa-star"></i> Star us on Github
+                        </div>
+                        <button type="button" class="btn btn-secondary me-2 rounded-3 btn-sm">Sign in</button>
+                        <button type="button" class="btn btn-success rounded-3 btn-sm">Start your project</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <!--Navbar or Navigation End-->
+    <!--Home Page Start-->
+        <div id="home" class="container-fluid ">
+            <div class="row w-100 h-100 pt-lg-5 pt-2">
+                <div class="col-12 col-md-12 col-lg-6 min-vh-100 d-flex flex-column justify-content-center p-3">
+                    <h1 class="brand">
+                        Digital Hunter <br>
+                        <span class="brand-span">Web Designer</span>
+                    </h1>
+                    <p class="brand-info font-size-0_8rem">
+                        Web Design ရေးဖို့အတွက် Deisgn လှလှလေးများရရှိနိုင်မည့်နေရာကိုရှာနေတယ်ဆိုရင်
+                        Digital Hunter ရှိပါတယ်။ မိမိ Company ရဲ့ Web Design ကို အရောင်အသွေးစုံလင်စွာနဲ့
+                        User များကို ဆွဲထားမယ်ဆိုရင် Digital Hunter မှာ Design အပ်နှံနိုင်ပါသည်။
+                    </p>
+                    <div class="d-sm-block d-lg-flex mt-3">
+                        <button type="button" class="btn btn-success me-3 rounded-3 mb-2 btn1 btn-sm">Start your project</button>
+                        <button type="button" class="btn btn-outline-secondary rounded-3 mb-2 btn2 btn-sm"><i class="fas fa-book-open"></i> Documentation</button>
+                    </div>
+                    <div class="who-powered mb-3">Backed By</div>
+                    <div class="company-logo-groups d-flex">
+                        <p class="y me-2">Y</p>
+                        <p class="mozilla font-color me-2">mozi://a</p>
+                        <p class="coatue font-color">COATUE</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+                    <svg class="svg-wolf" viewBox="0 0 515 549" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M514.109 115.034L510.085 23.3172C510.039 22.2564 509.724 21.2247 509.168 20.32C508.612 19.4152 507.835 18.6671 506.909 18.1467C505.984 17.6262 504.941 17.3504 503.879 17.3455C502.817 17.3406 501.771 17.6068 500.841 18.1187L371.611 89.1876C368.725 85.9362 364.95 83.6019 360.751 82.4734C356.552 81.3449 352.115 81.4716 347.988 82.838C343.861 84.2044 340.224 86.7505 337.529 90.1614C334.833 93.5723 333.196 97.6985 332.82 102.03L291.974 108.058H238.373L176.408 98.9166L47.5018 28.0385C47.9128 26.3387 48.1198 24.5961 48.1186 22.8473C48.1156 18.7276 46.9696 14.6894 44.808 11.1823C42.6464 7.67516 39.554 4.83662 35.875 2.98255C32.1961 1.12848 28.0748 0.331615 23.9698 0.68063C19.8649 1.02964 15.9373 2.51085 12.6241 4.95941C9.31095 7.40797 6.7422 10.7278 5.20371 14.5496C3.66523 18.3713 3.21738 22.5449 3.90998 26.6061C4.60258 30.6672 6.40847 34.4565 9.12669 37.5522C11.8449 40.648 15.3688 42.9288 19.3063 44.1408L17.1035 94.232C11.914 95.6763 7.42448 98.9538 4.46772 103.457C1.51096 107.959 0.28765 113.382 1.02471 118.718C1.76177 124.054 4.40917 128.941 8.47583 132.474C12.5425 136.007 17.7524 137.944 23.1391 137.928C24.0747 137.93 25.0093 137.868 25.9366 137.744L72.5621 238.411L46.2976 356.069C46.0174 357.298 46.1189 358.584 46.5886 359.754C47.0583 360.925 47.8738 361.924 48.9263 362.618L160.101 436.698L214.796 544.986C215.315 546.018 216.112 546.884 217.096 547.489C218.08 548.093 219.214 548.411 220.369 548.408H309.948C311.104 548.412 312.238 548.093 313.223 547.487C314.207 546.881 315.003 546.013 315.521 544.979L370.209 436.698L481.383 362.611C482.428 361.907 483.237 360.906 483.706 359.737C484.174 358.568 484.281 357.285 484.012 356.054L462.057 257.663C465.383 255.992 468.236 253.512 470.355 250.452C472.475 247.392 473.792 243.849 474.188 240.148C474.583 236.447 474.043 232.705 472.618 229.267C471.193 225.828 468.927 222.802 466.03 220.466L513.536 117.927C513.956 117.022 514.153 116.03 514.109 115.034ZM354.988 92.7268C357.213 92.7268 359.387 93.3865 361.237 94.6225C363.087 95.8586 364.529 97.6154 365.38 99.6708C366.232 101.726 366.454 103.988 366.02 106.17C365.586 108.352 364.515 110.357 362.942 111.93C361.369 113.503 359.364 114.574 357.182 115.008C355 115.442 352.738 115.22 350.683 114.368C348.628 113.517 346.871 112.075 345.635 110.225C344.399 108.375 343.739 106.2 343.739 103.976C343.741 100.993 344.927 98.1328 347.036 96.0236C349.145 93.9145 352.005 92.7287 354.988 92.7268ZM23.1391 126.914C20.9137 126.915 18.7378 126.257 16.8868 125.021C15.0358 123.786 13.5929 122.029 12.7406 119.973C11.8883 117.917 11.6649 115.655 12.0987 113.472C12.5325 111.29 13.604 109.285 15.1776 107.711C16.7512 106.137 18.7563 105.066 20.939 104.632C23.1218 104.198 25.3841 104.422 27.4399 105.274C29.4957 106.126 31.2524 107.569 32.4879 109.42C33.7234 111.271 34.3821 113.447 34.3806 115.672C34.3767 118.653 33.1911 121.51 31.0838 123.617C28.9764 125.724 26.1193 126.91 23.1391 126.914ZM36.1942 133.684C39.6554 131.178 42.3214 127.728 43.8733 123.747C45.4253 119.766 45.7975 115.422 44.9455 111.234C44.0935 107.047 42.0533 103.194 39.069 100.136C36.0847 97.0775 32.2825 94.9438 28.1174 93.9897L30.2981 44.6768C31.5828 44.4173 32.8411 44.0413 34.0575 43.5534L117.602 162.665L80.3967 229.079L36.1942 133.684ZM363.057 428.268C362.159 428.864 361.432 429.684 360.95 430.647L307.011 537.365H223.306L169.389 430.625C168.902 429.657 168.17 428.832 167.267 428.232L76.0351 367.435L154.373 388.347L225.787 449.68L225.149 481.04C225.129 482.021 225.341 482.993 225.767 483.877C226.193 484.761 226.821 485.532 227.601 486.128L261.377 511.945C262.466 512.774 263.797 513.222 265.166 513.222C266.534 513.222 267.865 512.774 268.954 511.945L302.73 486.135C303.51 485.539 304.138 484.768 304.564 483.884C304.991 483 305.202 482.028 305.183 481.047L304.544 449.68L375.966 388.347L454.282 367.442L363.057 428.268ZM209.648 348.814L163.463 344.6L148.396 314.833L187.217 316.947L210.383 340.789L209.648 348.814ZM236.207 478.852L236.699 455.076H293.626L294.118 478.852L265.158 500.975L236.207 478.852ZM319.912 340.811L343.078 316.97L381.898 314.855L366.839 344.622L320.646 348.814L319.912 340.811ZM472.484 354.975L373.249 381.474L371.78 382.208L327.255 420.507L321.689 359.784L369.695 355.379C370.996 355.263 372.246 354.817 373.327 354.084C374.407 353.35 375.283 352.353 375.87 351.186L395.783 311.844C396.248 310.925 396.464 309.899 396.407 308.87C396.35 307.841 396.024 306.845 395.461 305.982C394.898 305.119 394.117 304.42 393.198 303.953C392.279 303.487 391.254 303.271 390.225 303.327L341.206 306.014C339.259 306.111 337.422 306.943 336.066 308.342L310.939 334.203C310.162 335 309.567 335.956 309.195 337.006C308.824 338.056 308.685 339.174 308.788 340.282L316.975 429.311L299.793 444.062H230.509L213.327 429.311L221.521 340.29C221.625 339.18 221.487 338.062 221.117 337.011C220.747 335.96 220.153 335.002 219.377 334.203L194.251 308.342C192.893 306.945 191.057 306.114 189.111 306.014L140.107 303.349C139.078 303.293 138.052 303.509 137.133 303.976C136.214 304.442 135.434 305.141 134.87 306.004C134.307 306.867 133.981 307.863 133.924 308.892C133.868 309.921 134.083 310.947 134.548 311.866L154.461 351.208C155.049 352.375 155.924 353.372 157.005 354.106C158.085 354.839 159.335 355.285 160.637 355.401L208.642 359.806L203.077 420.529L158.507 382.26L157.039 381.526L57.8255 354.975L83.7155 238.962L84.0092 237.647L124.9 164.655C125.306 163.931 125.499 163.107 125.458 162.279C125.416 161.45 125.142 160.65 124.665 159.97L40.3501 39.7206C41.0635 39.1177 41.7356 38.4676 42.362 37.7748L171.951 109.042L172.818 109.519L237.55 119.065H292.745L334.597 112.897C336.649 117.576 340.247 121.408 344.79 123.747C349.332 126.087 354.541 126.792 359.542 125.745C364.543 124.698 369.031 121.962 372.253 117.996C375.475 114.031 377.234 109.078 377.236 103.968C377.237 102.287 377.045 100.612 376.663 98.9753L493.197 34.8892L418.435 141.68C415.376 140.68 412.137 140.355 408.941 140.728C405.745 141.101 402.667 142.163 399.921 143.84C397.174 145.518 394.825 147.771 393.033 150.444C391.241 153.117 390.051 156.147 389.544 159.325C389.036 162.502 389.224 165.752 390.094 168.851C390.964 171.949 392.495 174.821 394.583 177.27C396.67 179.72 399.264 181.687 402.185 183.037C405.106 184.386 408.286 185.087 411.504 185.089C413.197 185.092 414.885 184.897 416.533 184.509L437.144 221.303C433.858 224.273 431.535 228.157 430.471 232.457C429.407 236.757 429.651 241.276 431.172 245.436C432.692 249.596 435.421 253.207 439.007 255.807C442.593 258.407 446.874 259.876 451.301 260.028L472.484 354.975ZM452.079 249.036C449.854 249.036 447.679 248.376 445.829 247.14C443.979 245.904 442.538 244.147 441.686 242.092C440.835 240.036 440.612 237.775 441.046 235.592C441.48 233.41 442.551 231.406 444.125 229.833C445.698 228.26 447.702 227.188 449.884 226.754C452.066 226.32 454.328 226.543 456.384 227.394C458.439 228.246 460.196 229.688 461.432 231.537C462.668 233.387 463.328 235.562 463.328 237.787C463.326 240.77 462.14 243.63 460.031 245.739C457.922 247.848 455.062 249.034 452.079 249.036ZM456.014 215.891C454.717 215.649 453.399 215.528 452.079 215.532C449.069 215.527 446.09 216.139 443.326 217.331L423.34 181.66C426.385 179.749 428.921 177.128 430.731 174.021C432.541 170.915 433.57 167.416 433.731 163.825C433.892 160.233 433.18 156.656 431.655 153.4C430.131 150.144 427.839 147.307 424.977 145.131L499.725 38.3696L503.051 114.351L456.014 215.891Z" fill="#DBEAFE"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!--Home Page End-->
+
+        <!--Product Page Start-->
+        <div id="product" class="container-fluid">
+            <div   class="row w-100 gx-3 gy-2 pt-5">
+                <div class="col-12 col-md-12 col-lg-12">
+                    <h2 class="header2">Build faster and focus on your products</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder text-card">
+                                <i class="fa-solid fa-database icon rounded-2"></i>&nbsp;&nbsp;&nbsp;Database
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Every project is a full Postgres
+                                database, the world's most trusted
+                                relational database.
+                            </p>
+                            <a href="#" class="card-link text-decoration-none font-color font-size-0_8rem fw-bolder cursor-pointer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder text-card">
+                                <i class="fa-solid fa-key icon rounded-2"></i>&nbsp;&nbsp;&nbsp; Authornation
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Every project is a full Postgres
+                                database, the world's most trusted
+                                relational database.
+                            </p>
+                            <a href="#" class="card-link text-decoration-none font-color font-size-0_8rem fw-bolder cursor-pointer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3 text-card">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder text-card">
+                                <i class="fa-solid fa-box-open icon rounded-2"></i>&nbsp;&nbsp;&nbsp; Storage
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Every project is a full Postgres
+                                database, the world's most trusted
+                                relational database.
+                            </p>
+                            <a href="#" class="card-link text-decoration-none font-color font-size-0_8rem fw-bolder cursor-pointer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3 ">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder text-card">
+                                <i class="fa-solid fa-code icon rounded-2"></i>&nbsp;&nbsp;&nbsp; Edge Function
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Every project is a full Postgres
+                                database, the world's most trusted
+                                relational database.
+                            </p>
+                            <a href="#" class="card-link text-decoration-none font-color font-size-0_8rem fw-bolder cursor-pointer">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Product Page End-->
+        <!--Community Page Start-->
+        <div class="container-fluid">
+            <div class="row w-100 h-50 gy-1 gx-3 pt-5">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="header2">Join the community</h2>
+                    <p class="font-size-0_8rem font-color sub-header2">ကျောင်းသား/သူများမှ ပေးထားသော Review များ</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-secondary btn-sm fw-bold rounded-3 me-2 btn1">Github discussion <i class="fa-regular fa-comment"></i></button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm fw-bold rounded-3 btn2">Discard <i class="fa-regular fa-comment "></i></button>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3 bg">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder position-relative">
+                                <span class="position-absolute myposition translate-middle badge rounded-pill bg-primary"><i class="fa-brands fa-facebook-f"></i></span><i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                သင်ပြမှုလဲကောင်းသလို ပေးသမျှကိုလည်း စိတ်ရှည်ရှည်နဲ့
+                                နားလည်တဲ့ထိ ရှင်းပြပေးတာမို့လို့ တက်သင့်တဲ့
+                                သင်တန်းလေးတစ်ခုပါ။ ဒီထက်မက အောင်မြင်ပါစေဗျ။
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3 bg">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder position-relative">
+                                <span class="position-absolute myposition translate-middle badge rounded-pill bg-primary"><i class="fa-brands fa-facebook-f"></i></span><i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Myat Kyaw Thet
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Free Course တွေအတွက် Thanks a million 
+                                ပါဆရာ....PDF Color Package လေးအရမ်းမိုက်တယ်... 
+                                ဒီထက်မက အောင်မြင်ပါစေ... အများအပေါ်စေတနာထားပြီး
+                                သိချင်သမျှစိတ်ရျည်ပြီး ရှင်းပြတဲ့အတွက် 
+                                အများကြီးကျေးဇူးတင်ပါတယ်ဆရာ...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3 bg">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder position-relative">
+                                <span class="position-absolute myposition translate-middle badge rounded-pill bg-primary"><i class="fa-brands fa-facebook-f"></i></span><i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Yair Thu Ya Linn
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                Because of the useful and helpful
+                                knowledges, this page deserves a blue
+                                mark.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3">
+                    <div class="card border-1 rounded-3 bg">
+                        <div class="card-body">
+                            <div class="card-title fw-bolder position-relative">
+                                <span class="position-absolute myposition translate-middle badge rounded-pill bg-primary"><i class="fa-brands fa-facebook-f"></i></span><i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Kaung Myat Htun
+                            </div>
+                            <p class="card-text fw-bold font-size-0_8rem font-color">
+                                အခြေခံကနေပြီး အစ သေသေချာချာ ရှင်းပြတာဖြစ်လို့
+                                တကယ်တက်သင့်ပါတယ်
+                                Photoshop AI နဲ့ပတ်သတ်ပြီးလဲ ရှင်းပြတယ်ဆိုတော့
+                                front end အခြေံအတွက် recommended ပေးသင့်တဲ့
+                                class တစ်ခုပါပဲ့
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Community Page End-->
+
+        <!--What can you do start-->
+        <div id="developer" class="container-fluid">
+            <div class="row gy-2 gx-2 pt-5">
+                <div class="col-12 text-center">
+                    <h2 class="header header2">What can you build with Digital Hunter?</h2>
+                    <p class="sub-head font-size-0_8rem sub-header2">There are many example apps and starter projects to get going</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-secondary btn-sm fw-bold rounded-3 me-2 btn1">View all Examples</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm fw-bold rounded-3 btn2">Offical Github Library</button>
+                    </div>
+                </div>
+                <div class="w-100 d-none"></div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold">
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">Github Disussion <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold">
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">View Code <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold">
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">Github Disussion <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-lg-5">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold" >
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">Github Disussion <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-lg-5">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold">
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">Github Disussion <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-lg-5">
+                    <div class="card border-1 rounded-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">Svelte Kanban board</h4>
+                            <p class="card-text font-size-0_8rem fw-bold">
+                                A Trello clone using Supabase as the storage system.
+                            </p>
+                            <i class="fa-solid fa-circle icon-circle p-3 bg-secondary rounded-circle"></i>&nbsp;&nbsp;&nbsp; @Database
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-outline-secondary rounded-4">Github Disussion <i class="fa-solid fa-up-right-from-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--What can you do end-->
+
+        <!--Hard work section start-->
+        <div id="pricing" class="container-fluid">
+            <div class="row pt-5">
+                <div class="col-12 col-md-12 col-lg-6 pt-5">
+                    <div class="row p-3 gx-1 gy-2">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <h4 class="fw-bold header2">Instant APIs that do the hard work for you</h4>
+                            <p class="font-color font-size-0_8rem fw-bold sub-header2">
+                                We introspect your database to provide APIs instantly, Stop
+                                Building repetitve CRUD endpoints and focus on your product.
+                            </p>
+                        </div>
+                        <div class="w-100 d-none"></div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold l-header">TypeScript Support</h6>
+                                    <p class="card-text font-size-0_8rem fw-bold font-color">
+                                        Type definitions built directly from
+                                        your database schema
+                                    </p>
+                                    <a href="#" class="card-link text-decoration-none fw-bold font-color">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold l-header">TypeScript Support</h6>
+                                    <p class="card-text font-size-0_8rem fw-bold font-color">
+                                        Type definitions built directly from
+                                        your database schema
+                                    </p>
+                                    <a href="#" class="card-link text-decoration-none fw-bold font-color">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold l-header">TypeScript Support</h6>
+                                    <p class="card-text font-size-0_8rem fw-bold font-color">
+                                        Type definitions built directly from
+                                        your database schema
+                                    </p>
+                                    <a href="#" class="card-link text-decoration-none fw-bold font-color">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold l-header">TypeScript Support</h6>
+                                    <p class="card-text font-size-0_8rem fw-bold font-color">
+                                        Type definitions built directly from
+                                        your database schema
+                                    </p>
+                                    <a href="#" class="card-link text-decoration-none fw-bold font-color">Explore more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 pt-lg-4 overflow-hidden">
+                    <div class="d-flex pt-lg-5 mb-3">
+                        <button type="button" class="btn btn-outline-secondary active btn-sm rounded-3 me-1 fw-bold btns">Sign in</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-3 me-1 fw-bold  btns">Sign in</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-3 me-1 fw-bold  btns">Sign in</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-3 me-1 fw-bold  btns">Sign in</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-3 fw-bold btns">Sign in</button>
+                    </div>
+                    <img class=" svg4 img-fluid rounded" src="./img/code.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--Hard work section end-->
+
+        <!--Hard work section 2 start-->
+        <div class="container-fluid">
+            <div class="row pt-5 p-3">
+                <div class="col-12 col-md-12 col-lg-12 pt-5">
+                    <h4 class="section fw-bold header2">
+                        Instant APIs that do the hard work for you
+                    </h4>
+                </div>
+                <div class="w-100 d-none"></div>
+                <div class="col-12 col-md-12 col-lg-7">
+                    <img class="svg3 img-fluid rounded" src="./img/sanlinhtike.png" alt="">
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 pt-3 mb-5 linker">
+                    <nav>
+                        <div class="d-flex justify-content-start links">
+                            <div><a class="text-decoration-none nav-links me-3 font-color fw-bold activeClass" href="#link1">Table Editor</a></div>
+                            <div><a class="text-decoration-none nav-links me-3 font-color fw-bold" href="#link2">SQL Editor</a></div>
+                            <div><a class="text-decoration-none nav-links font-color fw-bold" href="#link3">Auth Rules</a></div>
+                        </div>
+                    </nav>
+                    <hr>
+                    <h6 class="hard-work2-head font-color fw-bold">
+                        Manage your data with the familiarity of a
+                        spreadsheet
+                    </h6>
+                    <p class="hard-work2-inf fw-bold font-color font-size-0_8rem">
+                        You don’t have to be a database expert to use Supabase. Our table editor makes Postgres easy to use, even for non-techies. You can do everything right in our dashboard.
+                    </p>
+                    <a class="text-decoration-none font-color fw-bold" href="#explore">Explore Tab View</a>
+                </div>
+            </div>
+        </div>
+        <!--Hard work section 2 end-->
+
+        <!--Scale up with no extra effort start-->
+        <div id="blog" class="container-fluid">
+            <div class="row pt-5 p-3 gx-2 gy-2">
+                <div class="col-12 col-md-12 col-lg-12 h-50 pt-2">
+                    <p class="powered-by">EXTERPRISE SOLUTIONS</p>
+                    <h4 class="sub-head font-color fw-bold header2">Scale up with no extra effort</h4>
+                    <p class="sub-info font-color fw-bold font-size-0_8rem sub-header2">
+                        Supabase is built with proven, enterprise-ready tools. We're supporting everything from
+                        fintech providers to social networks.
+                    </p>
+                </div>
+                <div class="w-100 d-none"></div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./img/card-img.png" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title sub-head font-color fw-bold">A web crawler handling millions of API requests.</h>
+                            <p class="card-text font-color font-size-0_8rem fw-bold pt-3">
+                                See how Monitoro built an automated a scrapin platform using Supabase.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./img/card-img.png" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title sub-head font-color fw-bold">A web crawler handling millions of API requests.</h>
+                            <p class="card-text font-color font-size-0_8rem fw-bold pt-3">
+                                See how Monitoro built an automated a scrapin platform using Supabase.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./img/card-img.png" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title sub-head font-color fw-bold">A web crawler handling millions of API requests.</h>
+                            <p class="card-text font-color font-size-0_8rem fw-bold pt-3">
+                                See how Monitoro built an automated a scrapin platform using Supabase.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Scale up with no extra effort end-->
+
+        <!--Start your project now start-->
+        <div class="container-fluid">
+            <div class="row min-vh-50 align-items-center">
+                <div class="col-12 col-md-12 col-lg-12 d-flex flex-column align-items-center">
+                    <h4 class="font-color sub-head mb-3 header2">Scale up with no effort</h4>
+                    <button class="btn btn-success btn4">Start your project</button>
+                </div>
+            </div>
+        </div>
+        <!--Start your project now end-->
+
+        <!--Lastest page start-->
+        <div class="container-fluid">
+            <div class="row pt-5 p-3 min-vh-100">
+                <div class="col-12 col-md-12 col-lg-4 pt-2">
+                    <h4 class="sub-head mb-3 header2">
+                        <svg width="45" height="45" viewBox="0 0 515 549" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M514.109 115.034L510.085 23.3172C510.039 22.2564 509.724 21.2247 509.168 20.32C508.612 19.4152 507.835 18.6671 506.909 18.1467C505.984 17.6262 504.941 17.3504 503.879 17.3455C502.817 17.3406 501.771 17.6068 500.841 18.1187L371.611 89.1876C368.725 85.9362 364.95 83.6019 360.751 82.4734C356.552 81.3449 352.115 81.4716 347.988 82.838C343.861 84.2044 340.224 86.7505 337.529 90.1614C334.833 93.5723 333.196 97.6985 332.82 102.03L291.974 108.058H238.373L176.408 98.9166L47.5018 28.0385C47.9128 26.3387 48.1198 24.5961 48.1186 22.8473C48.1156 18.7276 46.9696 14.6894 44.808 11.1823C42.6464 7.67516 39.554 4.83662 35.875 2.98255C32.1961 1.12848 28.0748 0.331615 23.9698 0.68063C19.8649 1.02964 15.9373 2.51085 12.6241 4.95941C9.31095 7.40797 6.7422 10.7278 5.20371 14.5496C3.66523 18.3713 3.21738 22.5449 3.90998 26.6061C4.60258 30.6672 6.40847 34.4565 9.12669 37.5522C11.8449 40.648 15.3688 42.9288 19.3063 44.1408L17.1035 94.232C11.914 95.6763 7.42448 98.9538 4.46772 103.457C1.51096 107.959 0.28765 113.382 1.02471 118.718C1.76177 124.054 4.40917 128.941 8.47583 132.474C12.5425 136.007 17.7524 137.944 23.1391 137.928C24.0747 137.93 25.0093 137.868 25.9366 137.744L72.5621 238.411L46.2976 356.069C46.0174 357.298 46.1189 358.584 46.5886 359.754C47.0583 360.925 47.8738 361.924 48.9263 362.618L160.101 436.698L214.796 544.986C215.315 546.018 216.112 546.884 217.096 547.489C218.08 548.093 219.214 548.411 220.369 548.408H309.948C311.104 548.412 312.238 548.093 313.223 547.487C314.207 546.881 315.003 546.013 315.521 544.979L370.209 436.698L481.383 362.611C482.428 361.907 483.237 360.906 483.706 359.737C484.174 358.568 484.281 357.285 484.012 356.054L462.057 257.663C465.383 255.992 468.236 253.512 470.355 250.452C472.475 247.392 473.792 243.849 474.188 240.148C474.583 236.447 474.043 232.705 472.618 229.267C471.193 225.828 468.927 222.802 466.03 220.466L513.536 117.927C513.956 117.022 514.153 116.03 514.109 115.034ZM354.988 92.7268C357.213 92.7268 359.387 93.3865 361.237 94.6225C363.087 95.8586 364.529 97.6154 365.38 99.6708C366.232 101.726 366.454 103.988 366.02 106.17C365.586 108.352 364.515 110.357 362.942 111.93C361.369 113.503 359.364 114.574 357.182 115.008C355 115.442 352.738 115.22 350.683 114.368C348.628 113.517 346.871 112.075 345.635 110.225C344.399 108.375 343.739 106.2 343.739 103.976C343.741 100.993 344.927 98.1328 347.036 96.0236C349.145 93.9145 352.005 92.7287 354.988 92.7268ZM23.1391 126.914C20.9137 126.915 18.7378 126.257 16.8868 125.021C15.0358 123.786 13.5929 122.029 12.7406 119.973C11.8883 117.917 11.6649 115.655 12.0987 113.472C12.5325 111.29 13.604 109.285 15.1776 107.711C16.7512 106.137 18.7563 105.066 20.939 104.632C23.1218 104.198 25.3841 104.422 27.4399 105.274C29.4957 106.126 31.2524 107.569 32.4879 109.42C33.7234 111.271 34.3821 113.447 34.3806 115.672C34.3767 118.653 33.1911 121.51 31.0838 123.617C28.9764 125.724 26.1193 126.91 23.1391 126.914ZM36.1942 133.684C39.6554 131.178 42.3214 127.728 43.8733 123.747C45.4253 119.766 45.7975 115.422 44.9455 111.234C44.0935 107.047 42.0533 103.194 39.069 100.136C36.0847 97.0775 32.2825 94.9438 28.1174 93.9897L30.2981 44.6768C31.5828 44.4173 32.8411 44.0413 34.0575 43.5534L117.602 162.665L80.3967 229.079L36.1942 133.684ZM363.057 428.268C362.159 428.864 361.432 429.684 360.95 430.647L307.011 537.365H223.306L169.389 430.625C168.902 429.657 168.17 428.832 167.267 428.232L76.0351 367.435L154.373 388.347L225.787 449.68L225.149 481.04C225.129 482.021 225.341 482.993 225.767 483.877C226.193 484.761 226.821 485.532 227.601 486.128L261.377 511.945C262.466 512.774 263.797 513.222 265.166 513.222C266.534 513.222 267.865 512.774 268.954 511.945L302.73 486.135C303.51 485.539 304.138 484.768 304.564 483.884C304.991 483 305.202 482.028 305.183 481.047L304.544 449.68L375.966 388.347L454.282 367.442L363.057 428.268ZM209.648 348.814L163.463 344.6L148.396 314.833L187.217 316.947L210.383 340.789L209.648 348.814ZM236.207 478.852L236.699 455.076H293.626L294.118 478.852L265.158 500.975L236.207 478.852ZM319.912 340.811L343.078 316.97L381.898 314.855L366.839 344.622L320.646 348.814L319.912 340.811ZM472.484 354.975L373.249 381.474L371.78 382.208L327.255 420.507L321.689 359.784L369.695 355.379C370.996 355.263 372.246 354.817 373.327 354.084C374.407 353.35 375.283 352.353 375.87 351.186L395.783 311.844C396.248 310.925 396.464 309.899 396.407 308.87C396.35 307.841 396.024 306.845 395.461 305.982C394.898 305.119 394.117 304.42 393.198 303.953C392.279 303.487 391.254 303.271 390.225 303.327L341.206 306.014C339.259 306.111 337.422 306.943 336.066 308.342L310.939 334.203C310.162 335 309.567 335.956 309.195 337.006C308.824 338.056 308.685 339.174 308.788 340.282L316.975 429.311L299.793 444.062H230.509L213.327 429.311L221.521 340.29C221.625 339.18 221.487 338.062 221.117 337.011C220.747 335.96 220.153 335.002 219.377 334.203L194.251 308.342C192.893 306.945 191.057 306.114 189.111 306.014L140.107 303.349C139.078 303.293 138.052 303.509 137.133 303.976C136.214 304.442 135.434 305.141 134.87 306.004C134.307 306.867 133.981 307.863 133.924 308.892C133.868 309.921 134.083 310.947 134.548 311.866L154.461 351.208C155.049 352.375 155.924 353.372 157.005 354.106C158.085 354.839 159.335 355.285 160.637 355.401L208.642 359.806L203.077 420.529L158.507 382.26L157.039 381.526L57.8255 354.975L83.7155 238.962L84.0092 237.647L124.9 164.655C125.306 163.931 125.499 163.107 125.458 162.279C125.416 161.45 125.142 160.65 124.665 159.97L40.3501 39.7206C41.0635 39.1177 41.7356 38.4676 42.362 37.7748L171.951 109.042L172.818 109.519L237.55 119.065H292.745L334.597 112.897C336.649 117.576 340.247 121.408 344.79 123.747C349.332 126.087 354.541 126.792 359.542 125.745C364.543 124.698 369.031 121.962 372.253 117.996C375.475 114.031 377.234 109.078 377.236 103.968C377.237 102.287 377.045 100.612 376.663 98.9753L493.197 34.8892L418.435 141.68C415.376 140.68 412.137 140.355 408.941 140.728C405.745 141.101 402.667 142.163 399.921 143.84C397.174 145.518 394.825 147.771 393.033 150.444C391.241 153.117 390.051 156.147 389.544 159.325C389.036 162.502 389.224 165.752 390.094 168.851C390.964 171.949 392.495 174.821 394.583 177.27C396.67 179.72 399.264 181.687 402.185 183.037C405.106 184.386 408.286 185.087 411.504 185.089C413.197 185.092 414.885 184.897 416.533 184.509L437.144 221.303C433.858 224.273 431.535 228.157 430.471 232.457C429.407 236.757 429.651 241.276 431.172 245.436C432.692 249.596 435.421 253.207 439.007 255.807C442.593 258.407 446.874 259.876 451.301 260.028L472.484 354.975ZM452.079 249.036C449.854 249.036 447.679 248.376 445.829 247.14C443.979 245.904 442.538 244.147 441.686 242.092C440.835 240.036 440.612 237.775 441.046 235.592C441.48 233.41 442.551 231.406 444.125 229.833C445.698 228.26 447.702 227.188 449.884 226.754C452.066 226.32 454.328 226.543 456.384 227.394C458.439 228.246 460.196 229.688 461.432 231.537C462.668 233.387 463.328 235.562 463.328 237.787C463.326 240.77 462.14 243.63 460.031 245.739C457.922 247.848 455.062 249.034 452.079 249.036ZM456.014 215.891C454.717 215.649 453.399 215.528 452.079 215.532C449.069 215.527 446.09 216.139 443.326 217.331L423.34 181.66C426.385 179.749 428.921 177.128 430.731 174.021C432.541 170.915 433.57 167.416 433.731 163.825C433.892 160.233 433.18 156.656 431.655 153.4C430.131 150.144 427.839 147.307 424.977 145.131L499.725 38.3696L503.051 114.351L456.014 215.891Z" fill="#DBEAFE"/>
+                            </svg>
+                        Digital Hunter
+                    </h4>
+                    <div class="icon-group d-flex justify-content-start">
+                        <i class="fa-brands fa-twitter icons me-5 font-color"></i>
+                        <i class="fa-brands fa-github icons me-5 font-color"></i>
+                        <i class="fa-brands fa-youtube icons me-5 font-color"></i>
+                        <i class="fa-solid fa-paper-plane icons font-color"></i>
+                    </div>
+                </div>
+                <div class="w-100 d-none"></div>
+                <div class="col-12 col-md-12 col-lg-2 pt-4">
+                    <h6 class="font-color fw-bold sub-head">Product</h6>
+                    <div class="d-flex flex-column">
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#product">Databse</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#auth">Auth</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#storage">Storage</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#functions">Functions</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#pricing">Pricing</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#beta">Beta</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 pt-4">
+                    <h6 class="font-color fw-bold sub-head">Resources</h6>
+                    <div class="d-flex flex-column">
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" #product">Databse</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#auth">Auth</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#storage">Storage</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#functions">Functions</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#pricing">Pricing</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#beta">Beta</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#privarypolicy">Privary Policy</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 pt-4">
+                    <h6 class="font-color fw-bold sub-head">Developer</h6>
+                    <div class="d-flex flex-column">
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#documentation">Documentation</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#APIreferences">API references</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#guides">Guides</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 pt-4">
+                    <h6 class="font-color fw-bold sub-head">Company</h6>
+                    <div class="d-flex flex-column">
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#blog">Blog</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#opensources">Open Sources</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#career">Career</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#human">Humans.txt</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#layer">Layer.txt</a>
+                        <a class="font-color font-size-0_8rem fw-bold text-decoration-none" href="#se">Security.txt</a>
+                    </div>
+                </div>
+                <hr class="mb-2 mt-5">
+                <div class="w-100 d-none"></div>
+                <div class="col-6 col-md-6 col-lg-6">
+                    <h6 class="font-color">© Supabase Inc</h6>    
+                </div>
+                <div class="col-6 col-md-6 col-lg-6 mb-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="fas fa-sun me-2"></i>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input change-theme btn-secondary" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+                            </div>
+                        <i class="fas fa-moon "></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Lastest page end-->
+
+        
+    <!--Bootstrap Js cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '30px',
+			duration: 2500,
+			delay: 400,
+        });
+        ScrollReveal().reveal('.card', {delay: 376, origin: 'bottom', interval: 100});
+        ScrollReveal().reveal('.btns', {delay: 376, origin: 'top', interval: 200});
+        ScrollReveal().reveal('.svg3', {delay: 500, origin: 'left'});
+        ScrollReveal().reveal('.brand', {delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.brand-info', {delay: 600, origin: 'left'});
+        ScrollReveal().reveal('.btn1, .btn2, .btn4', {delay: 600, origin: 'bottom', interval: 150});
+        ScrollReveal().reveal('.y, .mozilla, .coatue', {delay: 500, scale: '.5', interval: 160});
+        ScrollReveal().reveal('.who-powered', {delay: 400, origin: 'left'});
+        ScrollReveal().reveal('.header2', {delay: 400, origin: 'left'});
+        ScrollReveal().reveal('.sub-header2', {delay: 400, origin: 'bottom'});
+        ScrollReveal().reveal('.linker', {delay: 400, origin: 'left'});
+    </script>
+</body>
+</html>
